@@ -1,0 +1,21 @@
+.campo-digitacao{
+	font-size: 20px;
+	height: 150px;
+	
+}
+
+.campo-desativado{
+	background: #D3D3D3;
+}
+
+.icones{
+	vertical-align: middle;
+}
+
+.borda-verde{
+	border: 6px solid blue;	
+}
+
+.borda-vermelha{
+	border: 3px solid red;
+}
