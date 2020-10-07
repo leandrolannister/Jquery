@@ -4,7 +4,14 @@ $('#bnt-shuffle').click(function(){
 });
 
 function mudarFrase(){
-	$.get('http://localhost:3000/frases', trocaFrase);
+	$.get('http://localhost:3000/frases1', trocaFrase)
+	.fail(function(){
+      $('#error').show();
+
+      setTimeout(function(){
+        $('#error').toggle();
+      },4500);
+	});
  }
 
 function trocaFrase(data){
