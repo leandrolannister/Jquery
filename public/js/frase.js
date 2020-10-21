@@ -4,16 +4,19 @@ $('#bnt-shuffle').click(function(){
 });
 
 function mudarFrase(){
-	$.get('http://localhost:3000/frases1', trocaFrase)
-	.fail(function(){
+	
+  $('#spinner').toggle();
+
+  $.get('http://localhost:3000/frases', trocaFrase)
+	  
+    .fail(function(){
       $('#error').show();
-
-      setTimeout(function(){
-        $('#error').toggle();
-      },4500);
-	});
+      
+      setTimeout( () => $('#error').toggle(), 4500);
+	  })
+    .always( () => $('#spinner').toggle());
  }
-
+ 
 function trocaFrase(data){
   let indexFrase = integerNumber(data);
 	  
